@@ -9,7 +9,9 @@
 	$: if (router && (name || params)) {
 		const route = router.routeObject(name);
 		label = route.label || name;
-		href = route.pathBuilder(params);
+		if (route && route.pathBuilder) {
+			href = route.pathBuilder(params);
+		}
 	}
 </script>
 
