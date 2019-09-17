@@ -1,7 +1,7 @@
 {
 	"name": "@panta/svelte-router",
 	"description": "Svelte router based on alshdavid/crayon",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"license": "Apache-2.0",
 	"repository": {
 		"type": "git",

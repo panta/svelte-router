@@ -6,6 +6,7 @@
 	export let name = "";
 	export let label = "";
 	export let params = {};
+	export let query;
 	export let router;
 	let qs='';
 
