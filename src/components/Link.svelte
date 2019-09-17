@@ -1,10 +1,13 @@
 <script>
+    import queryString from 'query-string';
+
 	export let href="/";
 	export let cls="";
 	export let name = "";
 	export let label = "";
 	export let params = {};
 	export let router;
+	let qs='';
 
 	$: if (router && (name || params)) {
 		const route = router.routeObject(name);
@@ -13,8 +16,12 @@
 			href = route.pathBuilder(params);
 		}
 	}
+
+	$: if (query) {
+        qs = '?' + queryString.stringify(query);
+	}
 </script>
 
 <style></style>
 
-<a href={href} class={cls}><slot>{label}</slot></a>
+<a href="{href}{qs}" class={cls}><slot>{label}</slot></a>

@@ -1,7 +1,7 @@
 {
 	"name": "@panta/svelte-router",
 	"description": "Svelte router based on alshdavid/crayon",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "Apache-2.0",
 	"repository": {
 		"type": "git",
@@ -40,6 +40,7 @@
 		"path-to-regexp": "3.1.0",
 		"postcss": "7.0.18",
 		"prettier": "1.18.2",
+		"query-string": "6.8.3",
 		"rollup": "1.21.2",
 		"rollup-plugin-babel": "4.3.3",
 		"rollup-plugin-commonjs": "10.1.0",
