@@ -21,8 +21,12 @@
 	$: if (query) {
         qs = '?' + queryString.stringify(query);
 	}
+
+	function navigate() {
+		router.navigate(name, params);
+	}
 </script>
 
 <style></style>
 
-<a href="{href}{qs}" class={cls}><slot>{label}</slot></a>
+<a href="{href}{qs}" class={cls} on:click|preventDefault={navigate}><slot>{label}</slot></a>
