@@ -23,7 +23,7 @@
 	}
 
 	function navigate() {
-		router.navigate(name, params);
+		router.navigate(name, params, qs);
 	}
 </script>
 
