@@ -86,13 +86,16 @@ export class Router {
 		return this.nav.load();
 	}
 
-	navigate(pathOrName, params) {
+	navigate(pathOrName, params, qs) {
+		if (!qs) {
+			qs = "";
+		}
 		if (typeof params === 'undefined') {
 			// pathOrName is a _path_
-			return this.nav.navigate(pathOrName);
+			return this.nav.navigate(pathOrName + qs);
 		} else {
 			// pathOrName is a path _name_
-			const path = this.buildPath(pathOrName, params);
+			const path = this.buildPath(pathOrName, params) + qs;
 			return this.nav.navigate(path);
 		}
 	}
